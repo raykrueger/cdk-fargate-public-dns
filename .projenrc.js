@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'raykrueger@gmail.com',
   cdkVersion: '2.12.0',
   defaultReleaseBranch: 'main',
-  name: 'cdk-fargate-public-dns',
+  name: '@raykrueger/cdk-fargate-public-dns',
   repositoryUrl: 'https://github.com/raykrueger/cdk-fargate-public-dns.git',
   description: 'An AWS CDK module that listens for ECS Tasks to enter RUNNING state and then updates a Route 53 hosted zone with the public IP address attached to the task.',
   // deps: [],                /* Runtime dependencies of this module. */
