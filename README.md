@@ -1,4 +1,4 @@
-# cdk-fargate-public-dns
+# @raykrueger/cdk-fargate-public-dns
 
 This is an [AWS Cloud Development Kit](https://aws.amazon.com/cdk/) V2 construct
 library to support updating Route 53 entry with the public ip address of an ECS
