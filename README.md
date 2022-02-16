@@ -67,3 +67,9 @@ This CDK Construct deploys an AWS Lambda and an Amazon EventBridge rule. The
 rule is defined to look for the `lastStatus` and `desiredStatus` attributes to
 be 'RUNNING' of an `ECS Task State Change` event. It is also specifically tied
 to the Service and Cluster passed into the constructor.
+
+## I was here
+
+Note that I built this in my free time. This has nothing to do with my employer.
+
+Enjoy! -Ray
