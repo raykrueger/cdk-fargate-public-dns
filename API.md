@@ -118,8 +118,8 @@ const publicIPSupportProps: PublicIPSupportProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-fargate-public-dns.PublicIPSupportProps.property.cluster">cluster</a></code> | <code>aws-cdk-lib.aws_ecs.ICluster</code> | *No description.* |
-| <code><a href="#cdk-fargate-public-dns.PublicIPSupportProps.property.service">service</a></code> | <code>aws-cdk-lib.aws_ecs.IService</code> | *No description.* |
 | <code><a href="#cdk-fargate-public-dns.PublicIPSupportProps.property.dnsConfig">dnsConfig</a></code> | <code><a href="#cdk-fargate-public-dns.Route53DomainProps">Route53DomainProps</a></code> | *No description.* |
+| <code><a href="#cdk-fargate-public-dns.PublicIPSupportProps.property.service">service</a></code> | <code>aws-cdk-lib.aws_ecs.IService</code> | *No description.* |
 | <code><a href="#cdk-fargate-public-dns.PublicIPSupportProps.property.logRetention">logRetention</a></code> | <code>aws-cdk-lib.aws_logs.RetentionDays</code> | *No description.* |
 
 ---
@@ -134,6 +134,16 @@ public readonly cluster: ICluster;
 
 ---
 
+##### `dnsConfig`<sup>Required</sup> <a name="dnsConfig" id="cdk-fargate-public-dns.PublicIPSupportProps.property.dnsConfig"></a>
+
+```typescript
+public readonly dnsConfig: Route53DomainProps;
+```
+
+- *Type:* <a href="#cdk-fargate-public-dns.Route53DomainProps">Route53DomainProps</a>
+
+---
+
 ##### `service`<sup>Required</sup> <a name="service" id="cdk-fargate-public-dns.PublicIPSupportProps.property.service"></a>
 
 ```typescript
@@ -141,16 +151,6 @@ public readonly service: IService;
 ```
 
 - *Type:* aws-cdk-lib.aws_ecs.IService
-
----
-
-##### `dnsConfig`<sup>Optional</sup> <a name="dnsConfig" id="cdk-fargate-public-dns.PublicIPSupportProps.property.dnsConfig"></a>
-
-```typescript
-public readonly dnsConfig: Route53DomainProps;
-```
-
-- *Type:* <a href="#cdk-fargate-public-dns.Route53DomainProps">Route53DomainProps</a>
 
 ---
 
