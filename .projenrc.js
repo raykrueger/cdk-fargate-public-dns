@@ -10,8 +10,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   releaseToNpm: true,
   catalog: {
     announce: false,
-    twitter: 'raykrueger'
-  }
+    twitter: 'raykrueger',
+  },
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
