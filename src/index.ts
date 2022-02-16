@@ -65,7 +65,7 @@ export class PublicIPSupport extends Construct {
         func.addToRolePolicy(
           new PolicyStatement({
             actions: ['route53:ChangeResourceRecordSets', 'route53:ListResourceRecordSets'],
-            resources: [`arn:aws:route53:::hostedzone/${dnsConfig?.hostzedZone}`],
+            resources: [`arn:aws:route53:::hostedzone/${dnsConfig.hostzedZone}`],
           }),
         );
       }

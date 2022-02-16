@@ -40,9 +40,11 @@ function buildStack(props?: { assumedRole?: string }): cdk.Stack {
 
 describe('PublicIPSupport', () => {
 
+  /*
   test('Print it out', () => {
     console.log(JSON.stringify(Template.fromStack(buildStack({ assumedRole: 'FINDTHISROLE' })).toJSON(), null, 2));
   });
+  */
 
   test('Function with assumed role', () => {
     const stack = buildStack({ assumedRole: 'THE ROLE' });
