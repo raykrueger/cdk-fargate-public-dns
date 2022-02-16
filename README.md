@@ -13,6 +13,8 @@ CDK stack. Within the `dnsConfig` block you pass the Route 53 fully qualified
 domain name, and the hosted zone ID.
 
 ```javascript
+    import { PublicIPSupport } from '@raykrueger/cdk-fargate-public-dns';
+
     new PublicIPSupport(stack, 'PublicIPSupport', {
         cluster,
         service,
