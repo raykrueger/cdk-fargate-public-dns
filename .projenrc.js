@@ -16,7 +16,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
     '@types/prettier@2.6.0',
-  ],             /* Build dependencies for this module. */
+  ], /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
 project.synth();
