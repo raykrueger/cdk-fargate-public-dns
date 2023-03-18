@@ -29,7 +29,7 @@ def update_dns(public_ip, hosted_zone, domain_name, assumed_role=None):
     if assumed_role:
         sts = boto3.client("sts")
         sts_response = sts.assume_role(
-            RoleArn=assumed_role, RoleSessionName="valheim-r53-updater"
+            RoleArn=assumed_role, RoleSessionName="cdk-fargate-public-dns"
         )
 
         credentials = sts_response["Credentials"]
