@@ -2,7 +2,7 @@ const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Ray Krueger',
   authorAddress: 'raykrueger@gmail.com',
-  cdkVersion: '2.12.0',
+  cdkVersion: '2.69.0',
   defaultReleaseBranch: 'main',
   name: '@raykrueger/cdk-fargate-public-dns',
   repositoryUrl: 'https://github.com/raykrueger/cdk-fargate-public-dns.git',
