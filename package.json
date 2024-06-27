@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27",
-    "@types/node": "^16 <= 16.18.78",
+    "@types/node": "^18 <= 18.11.19",
     "@types/prettier": "2.6.0",
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
@@ -69,7 +69,7 @@
     "cdk"
   ],
   "engines": {
-    "node": ">= 16.14.0"
+    "node": ">= 18.20.3"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
