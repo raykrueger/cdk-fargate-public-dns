@@ -62,7 +62,7 @@ Returns a string representation of this construct.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@raykrueger/cdk-fargate-public-dns.PublicIPSupport.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@raykrueger/cdk-fargate-public-dns.PublicIPSupport.isConstruct"></a>
 
 ```typescript
 import { PublicIPSupport } from '@raykrueger/cdk-fargate-public-dns'
@@ -71,6 +71,20 @@ PublicIPSupport.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@raykrueger/cdk-fargate-public-dns.PublicIPSupport.isConstruct.parameter.x"></a>
 
@@ -179,7 +193,7 @@ const route53DomainProps: Route53DomainProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.hostzedZone">hostzedZone</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.hostedZone">hostedZone</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.assumedRole">assumedRole</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -194,10 +208,10 @@ public readonly domainName: string;
 
 ---
 
-##### `hostzedZone`<sup>Required</sup> <a name="hostzedZone" id="@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.hostzedZone"></a>
+##### `hostedZone`<sup>Required</sup> <a name="hostedZone" id="@raykrueger/cdk-fargate-public-dns.Route53DomainProps.property.hostedZone"></a>
 
 ```typescript
-public readonly hostzedZone: string;
+public readonly hostedZone: string;
 ```
 
 - *Type:* string

@@ -10,7 +10,7 @@ import { Construct } from 'constructs';
 
 export interface Route53DomainProps {
   readonly assumedRole?: string;
-  readonly hostzedZone: string;
+  readonly hostedZone: string;
   readonly domainName: string;
 }
 
@@ -46,7 +46,7 @@ export class PublicIPSupport extends Construct {
     });
 
     if (dnsConfig) {
-      func.addEnvironment('DNS_HOSTED_ZONE', dnsConfig.hostzedZone);
+      func.addEnvironment('DNS_HOSTED_ZONE', dnsConfig.hostedZone);
       func.addEnvironment('DNS_DOMAIN', dnsConfig.domainName);
 
       /**
@@ -65,7 +65,7 @@ export class PublicIPSupport extends Construct {
         func.addToRolePolicy(
           new PolicyStatement({
             actions: ['route53:ChangeResourceRecordSets', 'route53:ListResourceRecordSets'],
-            resources: [`arn:aws:route53:::hostedzone/${dnsConfig.hostzedZone}`],
+            resources: [`arn:aws:route53:::hostedzone/${dnsConfig.hostedZone}`],
           }),
         );
       }

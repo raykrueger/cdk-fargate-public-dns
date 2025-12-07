@@ -30,7 +30,7 @@ function buildStack(props?: { assumedRole?: string }): cdk.Stack {
     service,
     dnsConfig: {
       domainName: 'www.example.com',
-      hostzedZone: 'ZONEID',
+      hostedZone: 'ZONEID',
       assumedRole: props?.assumedRole,
     },
   });
