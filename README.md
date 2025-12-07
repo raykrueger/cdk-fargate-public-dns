@@ -6,6 +6,8 @@ Fargate task. This is useful if you are, say, running an individual instance of
 a game server on ECS Fargate and do not want the added cost of a Network Load
 Balancer.
 
+v0.0.22 Breaking change. I finally fixed the hostzedZone typo :)
+
 ## Usage
 
 This is the simple usecase. You pass an ECS Service and Cluster defined by your
