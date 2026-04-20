@@ -10,9 +10,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'An AWS CDK module that listens for ECS Tasks to enter RUNNING state and then updates a Route 53 hosted zone with the public IP address attached to the task.',
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
-  npmPublishOptions: {
-    trustedPublishing: true,
-  },
+  npmTrustedPublishing: true,
   minNodeVersion: '22.21.1',
   catalog: {
     announce: false,
