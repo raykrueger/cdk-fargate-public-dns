@@ -41,7 +41,7 @@
     "@types/prettier": "2.6.0",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
-    "aws-cdk-lib": "2.74.0",
+    "aws-cdk-lib": "2.189.1",
     "commit-and-tag-version": "^12",
     "constructs": "10.5.1",
     "eslint": "^9",
