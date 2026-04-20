@@ -3,7 +3,7 @@ const { NpmAccess } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Ray Krueger',
   authorAddress: 'raykrueger@gmail.com',
-  cdkVersion: '2.74.0',
+  cdkVersion: '2.250.0',
   defaultReleaseBranch: 'main',
   name: '@raykrueger/cdk-fargate-public-dns',
   repositoryUrl: 'https://github.com/raykrueger/cdk-fargate-public-dns.git',
@@ -11,7 +11,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   npmTrustedPublishing: true,
-  minNodeVersion: '22.21.1',
+  minNodeVersion: '24.0.0',
   catalog: {
     announce: false,
     twitter: 'raykrueger',

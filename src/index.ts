@@ -32,7 +32,7 @@ export class PublicIPSupport extends Construct {
     const logRetention = props.logRetention || RetentionDays.THREE_DAYS;
 
     const func = new lambda.Function(this, 'PublicIPManager', {
-      runtime: lambda.Runtime.PYTHON_3_9,
+      runtime: lambda.Runtime.PYTHON_3_12,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../resources/functions/public_ip_manager')),
       timeout: Duration.seconds(10),

@@ -51,7 +51,7 @@ describe('PublicIPSupport', () => {
     const template = Template.fromStack(stack);
     template.hasResourceProperties('AWS::Lambda::Function', {
       Handler: 'index.handler',
-      Runtime: 'python3.9',
+      Runtime: 'python3.12',
       Environment: {
         Variables: {
           DNS_HOSTED_ZONE: 'ZONEID',
@@ -67,7 +67,7 @@ describe('PublicIPSupport', () => {
     const template = Template.fromStack(stack);
     template.hasResourceProperties('AWS::Lambda::Function', {
       Handler: 'index.handler',
-      Runtime: 'python3.9',
+      Runtime: 'python3.12',
       Environment: {
         Variables: {
           DNS_HOSTED_ZONE: 'ZONEID',
