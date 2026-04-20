@@ -1,4 +1,4 @@
-const { awscdk } = require('projen');
+const { awscdk, JsonPatch } = require('projen');
 const { NpmAccess } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Ray Krueger',
@@ -23,4 +23,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   ], /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
+// Node 24.0.0 bundles npm 11.0.0, but OIDC trusted publishing requires npm 11.5.1+.
+// Use '24.x' to get the latest Node 24 patch with a compatible npm.
+project.github.tryFindWorkflow('release').file.patch(
+  JsonPatch.replace('/jobs/release_npm/steps/0/with/node-version', '24.x'),
+);
+
 project.synth();
